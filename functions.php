@@ -20,6 +20,20 @@ function register_assets(){
           '1.0'
     );
 
+    wp_enqueue_style(
+      'nav-css',
+      get_template_directory_uri().'/assets/styles/nav.css',
+      array(),
+      '1.0'
+    );
+
+    wp_enqueue_style(
+      'footer-css',
+      get_template_directory_uri().'/assets/styles/footer.css',
+      array(),
+      '1.0'
+);
+
 }
 add_action('wp_enqueue_scripts', 'register_assets');
 

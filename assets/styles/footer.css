@@ -1,0 +1,42 @@
+footer {
+  background-color: black;
+  color: white;
+}
+footer .footer__infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px 0px;
+}
+footer .footer__infos .footer__logo img {
+  width: 15em;
+}
+footer .footer__infos .footer__contact {
+  text-align: right;
+}
+footer .footer__infos .footer__contact .bold {
+  font-weight: bold;
+}
+footer .footer__infos .footer__contact p {
+  margin: 10px 0px;
+}
+footer .footer__infos .footer__contact #footer__contactRS {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+footer .footer__infos .footer__contact #footer__contactRS .footer__contactRS img {
+  width: 30px;
+  margin: 0px 10px;
+}
+footer .footer__credits {
+  text-align: center;
+  padding: 5px 0px;
+}
+
+@media (max-width: 500px) {
+  .footer__infos {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=footer.css.map */

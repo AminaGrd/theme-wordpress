@@ -27,14 +27,4 @@ html {
 /* .content img[class*="wp"]{
     object-fit: contain !important;
     height: auto;
-} *//*# sourceMappingURL=main.css.map */ 
-
-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-}
-.nav__burger{
-    display: flex;
-    flex-direction: row;
-}
+} *//*# sourceMappingURL=main.css.map */
