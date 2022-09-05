@@ -32,6 +32,13 @@ function register_assets(){
       get_template_directory_uri().'/assets/styles/footer.css',
       array(),
       '1.0'
+    );
+
+    wp_enqueue_script(
+      'script-burger',
+      get_template_directory_uri().'/assets/scripts/nav.js',
+      array(),
+      '1.0'
 );
 
 }

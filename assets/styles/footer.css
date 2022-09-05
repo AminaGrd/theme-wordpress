@@ -19,7 +19,7 @@ footer .footer__infos .footer__contact .bold {
   font-weight: bold;
 }
 footer .footer__infos .footer__contact p {
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 footer .footer__infos .footer__contact #footer__contactRS {
   display: flex;
@@ -34,9 +34,18 @@ footer .footer__credits {
   text-align: center;
   padding: 5px 0px;
 }
-
 @media (max-width: 500px) {
-  .footer__infos {
+  footer .footer__infos {
     flex-direction: column;
+  }
+  footer .footer__infos .footer__contact {
+    text-align: center;
+    margin: 20px 0px;
+  }
+  footer .footer__infos .footer__contact #footer__contactRS {
+    justify-content: center;
+  }
+  footer .footer__infos .footer__contact #footer__contactRS .footer__contactRS img {
+    width: 50px;
   }
 }/*# sourceMappingURL=footer.css.map */

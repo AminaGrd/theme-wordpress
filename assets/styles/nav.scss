@@ -35,21 +35,25 @@ nav{
 }
 
 @media screen and (max-width: 1265px){
-    .menu-navbar-container{
+    
+    .nav__contact{
         display: none;
     }
-    .nav__contact{
+}
+@media screen and (max-width: 1100px){
+    .menu-navbar-container{
         display: none;
     }
     .nav__burger{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 30px;
+        height: 25px;
         div{
-        height: 5px;
+        height: 4px;
         width: 35px;
         background-color: #0d5969;
+        border-radius: 20px;
         }
     }
 }

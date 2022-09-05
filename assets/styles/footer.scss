@@ -16,7 +16,7 @@ footer{
           font-weight: bold;
         }
         p{
-          margin: 10px 0px;
+          margin: 20px 0px;
         }
         #footer__contactRS{
           display: flex;
@@ -35,10 +35,23 @@ footer{
     text-align: center;
     padding: 5px 0px;
   }
-}
 
 @media (max-width: 500px){
-  .footer__infos{
-    flex-direction: column;
-  }
+
+    .footer__infos{
+      flex-direction: column;
+      .footer__contact{
+        text-align: center;
+        margin: 20px 0px;
+        #footer__contactRS{
+          justify-content:center;
+          .footer__contactRS{
+            img{
+              width: 50px;
+            }
+          }
+        }
+      }
+    }
+}
 }
