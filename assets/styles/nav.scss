@@ -3,13 +3,13 @@ nav{
     flex-direction: row;
     justify-content:space-around;
     align-items: center;
-    img{
-        width: 18em;
-        margin: 20px 0px;
+    .nav__logo{
+        >img{
+            width: 18em;
+            margin: 20px 0px;
+        }
     }
-}
-
-#menu-navbar{
+    #menu-navbar{
     display: flex;
     flex-direction: row;
     >li{
@@ -32,7 +32,14 @@ nav{
     color: white;
     padding: 4px 15px;
     font-size: 20px;
+    >img{
+        display: none;
+    }
 }
+
+}
+
+
 
 @media screen and (max-width: 1265px){
     
@@ -41,7 +48,7 @@ nav{
     }
 }
 nav{
-    @media screen and (max-width: 1100px){
+    @media screen and (max-width: 1110px){
         flex-wrap: wrap;
     .menu-navbar-container{
         display: none;
@@ -69,7 +76,14 @@ nav{
         border-radius: 20px;
         }
     }
-    
+    .nav__contact{
+        // >a{
+        //     background-color: transparent;
+        // }
+        >img{
+            display: inline;
+        }
+    }
 }
 
 }
