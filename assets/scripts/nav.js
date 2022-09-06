@@ -1,5 +1,3 @@
-// display responsive menu
-
 const burger = document.getElementById('burger');
 const inMenu = document.querySelector("nav ul.menu");
 const navbarlanding = document.getElementsByClassName('menu-navbar-container')[0]; // cible nav wp list
@@ -7,6 +5,7 @@ let i = 0;
 
 burger.addEventListener('click', function() {
     toogleMenu();
+    console.log("test")
 })
 inMenu.addEventListener('click', function() { // si on clique sur le menu
     if (i != 0) {

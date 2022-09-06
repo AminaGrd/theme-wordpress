@@ -34,12 +34,6 @@ function register_assets(){
       '1.0'
     );
 
-    wp_enqueue_script(
-      'script-burger',
-      get_template_directory_uri().'/assets/scripts/nav.js',
-      array(),
-      '1.0'
-);
 
 }
 add_action('wp_enqueue_scripts', 'register_assets');

@@ -42,16 +42,29 @@ nav img {
   }
 }
 @media screen and (max-width: 1100px) {
-  .menu-navbar-container {
+  nav {
+    flex-wrap: wrap;
+  }
+  nav .menu-navbar-container {
     display: none;
   }
-  .nav__burger {
+  nav .menu-navbar-container.menu-navbar-container--show {
+    display: block;
+    order: 3;
+    min-width: 98vw;
+  }
+  nav #menu-navbar {
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(239, 239, 239);
+  }
+  nav .nav__burger {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 25px;
   }
-  .nav__burger div {
+  nav .nav__burger div {
     height: 4px;
     width: 35px;
     background-color: #0d5969;
