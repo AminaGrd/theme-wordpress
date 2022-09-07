@@ -32,7 +32,7 @@ if (!isset($this_name)||empty($this_name)) {
         get_template_part( 'template-parts/headOfLanding' );
     } else {
         ?>
-        <h1 class="page_title"><script>document.write(bodyTitle);</script></h1>
+        <!-- <h1 class="page_title"><script>document.write(bodyTitle);</script></h1> -->
         <?php
     }
 ?>

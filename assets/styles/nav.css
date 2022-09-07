@@ -64,7 +64,7 @@ nav .nav__contact > img {
   nav .menu-navbar-container.menu-navbar-container--show {
     display: block;
     order: 3;
-    min-width: 98vw;
+    min-width: 100vw;
     -webkit-animation-duration: 0.5s;
             animation-duration: 0.5s;
     -webkit-animation-name: showMenu;
@@ -98,7 +98,7 @@ nav .nav__contact > img {
   nav .nav__burger > div {
     height: 4px;
     width: 35px;
-    background-color: #0d5969;
+    background-color: var(--mainBlueDark);
     border-radius: 20px;
   }
   nav .nav__burger.nav__burger--cross div:nth-child(1) {
@@ -178,7 +178,7 @@ nav .nav__contact > img {
     top: -300px;
   }
   to {
-    top: 110px;
+    top: 150px;
   }
 }
 
@@ -187,12 +187,12 @@ nav .nav__contact > img {
     top: -300px;
   }
   to {
-    top: 110px;
+    top: 150px;
   }
 }
 @-webkit-keyframes unshowMenu {
   from {
-    top: 110px;
+    top: 150px;
   }
   to {
     top: -300px;
@@ -200,7 +200,7 @@ nav .nav__contact > img {
 }
 @keyframes unshowMenu {
   from {
-    top: 110px;
+    top: 150px;
   }
   to {
     top: -300px;

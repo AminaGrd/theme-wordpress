@@ -2,11 +2,28 @@
   --mainColor: black;
   --mainBlue: #00abda;
   --mainBlueAlpha: #00abda91;
+  --mainBlueDark: #00485c;
 }
 
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("../font/OpenSans-Light.ttf");
+}
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../font/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../font/OpenSans-Bold.ttf");
+}
+@font-face {
+  font-family: "OpenSans-ExtraBold";
+  src: url("../font/OpenSans-ExtraBold.ttf");
+}
 html {
   font-size: 15px;
-  font-family: sans-serif;
+  font-family: "OpenSans-Regular";
 }
 
 /* .pagination{

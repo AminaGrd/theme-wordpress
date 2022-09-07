@@ -1,6 +1,6 @@
 .headOfLanding{
     z-index: -1;
-    height: 70vh;
+    height: 80vh;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -16,5 +16,11 @@
         padding: 0.9rem;
         text-transform: uppercase;
         font-size: 1.6rem;
+    }
+
+    @media screen and (max-width: 600px){
+        h1{
+            font-size: 1.2rem;
+        }
     }
 }

@@ -70,7 +70,7 @@ nav{
         &.menu-navbar-container--show{
             display: block;
             order: 3;
-            min-width: 98vw;
+            min-width: 100vw;
             animation-duration: 0.5s;
             animation-name: showMenu;
             animation-fill-mode: forwards;
@@ -99,7 +99,7 @@ nav{
             >div{
             height: 4px;
             width: 35px;
-            background-color: #0d5969;
+            background-color: var(--mainBlueDark);
             border-radius: 20px;
             }
             &.nav__burger--cross{
@@ -176,12 +176,12 @@ nav{
         top: -300px;
     }
     to {
-        top: 110px;
+        top: 150px;
     }
   }
   @keyframes unshowMenu {
     from {
-        top: 110px;
+        top: 150px;
     }
     to {
         top: -300px;
