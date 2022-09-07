@@ -5,6 +5,7 @@ nav{
     align-items: center;
     .nav__logo{
         >img{
+            cursor: pointer;
             height: 8vh;
             margin: 3vh 0;
         }
@@ -41,24 +42,28 @@ nav{
     padding: 4px 15px;
     font-size: 2.5vh;
     margin-bottom: 2vh;
-    >img{
-        display: none;
-    }
+        >img{
+            display: none;
+        }
 }
 
 }
 
 
-
+nav{
 @media screen and (max-width: 1265px){
     
     .nav__contact{
-        display: none;
+        background-color: transparent;
+        a{
+            display: none;
+        }
     }
 }
-nav{
+
     @media screen and (max-width: 1110px){
         flex-wrap: wrap;
+        margin: 0 3vh;
     .menu-navbar-container{
         display: none;
         position: absolute;
@@ -86,11 +91,12 @@ nav{
     }
     
     .nav__burger{
+        cursor: pointer;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 25px;
-        div{
+        >div{
         height: 4px;
         width: 35px;
         background-color: #0d5969;
@@ -98,12 +104,28 @@ nav{
         }
     }
     .nav__contact{
-        // >a{
-        //     background-color: transparent;
-        // }
-        >img{
-            display: inline;
+        margin-left: auto;
+        img{
+            cursor: pointer;
+            display: block;
+            height: 5vh;
+            position: relative;
+            top: 1vh;
+            margin-right: 2vh;
         }
+    }
+}
+@media (max-width: 500px){
+    .nav__logo{
+        >img{
+            height: 7vh;
+        }
+    }
+    .nav__contact{
+        margin-left: auto;
+            >img{
+            display: none;
+        } 
     }
 }
 

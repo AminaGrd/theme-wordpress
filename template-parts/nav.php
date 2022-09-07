@@ -4,8 +4,8 @@
     </div>
     <?php wp_nav_menu( array( 'menu' => 'navbar' ) ); ?>
     <div class="nav__contact">
-        <a href="tel:0474423218">04 74 42 32 18</a>
-        <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/ico/logo-tel.png">
+        <a href="">04 74 42 32 18</a>
+            <img onclick="location.href='tel:0474423218';" src="<?php bloginfo('stylesheet_directory'); ?>/assets/ico/logo-tel.png" alt="icone du site">
     </div>
     <div class="nav__burger" id="burger">
         <div></div>

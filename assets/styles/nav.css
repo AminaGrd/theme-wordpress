@@ -5,6 +5,7 @@ nav {
   align-items: center;
 }
 nav .nav__logo > img {
+  cursor: pointer;
   height: 8vh;
   margin: 3vh 0;
 }
@@ -44,13 +45,17 @@ nav .nav__contact > img {
 }
 
 @media screen and (max-width: 1265px) {
-  .nav__contact {
+  nav .nav__contact {
+    background-color: transparent;
+  }
+  nav .nav__contact a {
     display: none;
   }
 }
 @media screen and (max-width: 1110px) {
   nav {
     flex-wrap: wrap;
+    margin: 0 3vh;
   }
   nav .menu-navbar-container {
     display: none;
@@ -84,19 +89,39 @@ nav .nav__contact > img {
     background-color: rgba(245, 245, 245, 0.95);
   }
   nav .nav__burger {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 25px;
   }
-  nav .nav__burger div {
+  nav .nav__burger > div {
     height: 4px;
     width: 35px;
     background-color: #0d5969;
     border-radius: 20px;
   }
+  nav .nav__contact {
+    margin-left: auto;
+  }
+  nav .nav__contact img {
+    cursor: pointer;
+    display: block;
+    height: 5vh;
+    position: relative;
+    top: 1vh;
+    margin-right: 2vh;
+  }
+}
+@media (max-width: 500px) {
+  nav .nav__logo > img {
+    height: 7vh;
+  }
+  nav .nav__contact {
+    margin-left: auto;
+  }
   nav .nav__contact > img {
-    display: inline;
+    display: none;
   }
 }
 
