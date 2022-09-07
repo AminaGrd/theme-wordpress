@@ -21,5 +21,20 @@ if (!isset($this_name)||empty($this_name)) {
     <?php wp_body_open(); ?>
 
     <?php get_template_part( 'template-parts/nav' ); ?>
-    
+
+    <script>
+        const bodyTitle = document.title.replace(' | Expérience Industries', '');
+        console.log('bodyTitle : ', bodyTitle);
+    </script>
+
+    <?php
+    if (is_front_page() ===  true) {
+        get_template_part( 'template-parts/headOfLanding' );
+    } else {
+        ?>
+        <h1 class="page_title"><script>document.write(bodyTitle);</script></h1>
+        <?php
+    }
+?>
+
     <div class="content">
