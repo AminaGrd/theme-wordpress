@@ -19,21 +19,21 @@ nav #menu-navbar > li {
   font-size: 2vh;
 }
 nav #menu-navbar > li:hover a {
-  color: #00abda;
-  border-bottom: 3px #00abda solid;
+  color: var(--mainBlue);
+  border-bottom: 3px var(--mainBlue) solid;
   padding-bottom: 5px;
 }
 nav .current-menu-item {
   margin-bottom: 2vh;
 }
 nav .current-menu-item > a {
-  color: #00abda;
-  border-bottom: 3px #00abda solid;
+  color: var(--mainBlue);
+  border-bottom: 3px var(--mainBlue) solid;
   padding-bottom: 5px;
   font-weight: bold;
 }
 nav .nav__contact {
-  background-color: #00abda;
+  background-color: var(--mainBlue);
   font-weight: bold;
   color: white;
   padding: 4px 15px;
@@ -67,8 +67,8 @@ nav .nav__contact > img {
     min-width: 98vw;
     -webkit-animation-duration: 0.5s;
             animation-duration: 0.5s;
-    -webkit-animation-name: showNav;
-            animation-name: showNav;
+    -webkit-animation-name: showMenu;
+            animation-name: showMenu;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
   }
@@ -78,8 +78,8 @@ nav .nav__contact > img {
     min-width: 98vw;
     -webkit-animation-duration: 0.5s;
             animation-duration: 0.5s;
-    -webkit-animation-name: unshowNav;
-            animation-name: unshowNav;
+    -webkit-animation-name: unshowMenu;
+            animation-name: unshowMenu;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
   }
@@ -100,6 +100,54 @@ nav .nav__contact > img {
     width: 35px;
     background-color: #0d5969;
     border-radius: 20px;
+  }
+  nav .nav__burger.nav__burger--cross div:nth-child(1) {
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-name: crossMenu1;
+            animation-name: crossMenu1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  nav .nav__burger.nav__burger--cross div:nth-child(2) {
+    -webkit-animation-duration: 0.05s;
+            animation-duration: 0.05s;
+    -webkit-animation-name: crossMenu2;
+            animation-name: crossMenu2;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  nav .nav__burger.nav__burger--cross div:nth-child(3) {
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-name: crossMenu3;
+            animation-name: crossMenu3;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  nav .nav__burger.nav__burger--burger div:nth-child(1) {
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-name: burgerMenu1;
+            animation-name: burgerMenu1;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+  nav .nav__burger.nav__burger--burger div:nth-child(2) {
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-name: burgerMenu2;
+            animation-name: burgerMenu2;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+  nav .nav__burger.nav__burger--burger div:nth-child(3) {
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-name: burgerMenu3;
+            animation-name: burgerMenu3;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
   }
   nav .nav__contact {
     margin-left: auto;
@@ -125,7 +173,7 @@ nav .nav__contact > img {
   }
 }
 
-@-webkit-keyframes showNav {
+@-webkit-keyframes showMenu {
   from {
     top: -40vh;
   }
@@ -134,7 +182,7 @@ nav .nav__contact > img {
   }
 }
 
-@keyframes showNav {
+@keyframes showMenu {
   from {
     top: -40vh;
   }
@@ -142,7 +190,7 @@ nav .nav__contact > img {
     top: 20vh;
   }
 }
-@-webkit-keyframes unshowNav {
+@-webkit-keyframes unshowMenu {
   from {
     top: 20vh;
   }
@@ -150,11 +198,107 @@ nav .nav__contact > img {
     top: -40vh;
   }
 }
-@keyframes unshowNav {
+@keyframes unshowMenu {
   from {
     top: 20vh;
   }
   to {
     top: -40vh;
+  }
+}
+@-webkit-keyframes crossMenu1 {
+  from {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  to {
+    transform: rotate(45deg) translate(8px, 5px);
+  }
+}
+@keyframes crossMenu1 {
+  from {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  to {
+    transform: rotate(45deg) translate(8px, 5px);
+  }
+}
+@-webkit-keyframes crossMenu2 {
+  from {
+    opacity: 100;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes crossMenu2 {
+  from {
+    opacity: 100;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes crossMenu3 {
+  from {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  to {
+    transform: rotate(-45deg) translate(9px, -7px);
+  }
+}
+@keyframes crossMenu3 {
+  from {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  to {
+    transform: rotate(-45deg) translate(9px, -7px);
+  }
+}
+@-webkit-keyframes burgerMenu1 {
+  from {
+    transform: rotate(45deg) translate(8px, 5px);
+  }
+  to {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+}
+@keyframes burgerMenu1 {
+  from {
+    transform: rotate(45deg) translate(8px, 5px);
+  }
+  to {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+}
+@-webkit-keyframes burgerMenu2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+@keyframes burgerMenu2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+@-webkit-keyframes burgerMenu3 {
+  from {
+    transform: rotate(-45deg) translate(9px, -7px);
+  }
+  to {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+}
+@keyframes burgerMenu3 {
+  from {
+    transform: rotate(-45deg) translate(9px, -7px);
+  }
+  to {
+    transform: rotate(0deg) translate(0px, 0px);
   }
 }/*# sourceMappingURL=nav.css.map */

@@ -19,8 +19,8 @@ nav{
         font-size: 2vh;
         &:hover{
             a{
-            color: #00abda;
-            border-bottom: 3px #00abda solid;
+            color: var(--mainBlue);
+            border-bottom: 3px var(--mainBlue) solid;
             padding-bottom: 5px; 
             }
         }
@@ -29,14 +29,14 @@ nav{
 .current-menu-item{
     margin-bottom: 2vh;
     >a{
-        color: #00abda;
-        border-bottom: 3px #00abda solid;
+        color: var(--mainBlue);
+        border-bottom: 3px var(--mainBlue) solid;
         padding-bottom: 5px;
         font-weight: bold;
     }
 }
 .nav__contact{
-    background-color: #00abda;
+    background-color: var(--mainBlue);
     font-weight: bold;
     color: white;
     padding: 4px 15px;
@@ -72,7 +72,7 @@ nav{
             order: 3;
             min-width: 98vw;
             animation-duration: 0.5s;
-            animation-name: showNav;
+            animation-name: showMenu;
             animation-fill-mode: forwards;
         }
         &.menu-navbar-container--unshow{
@@ -80,7 +80,7 @@ nav{
             order: 3;
             min-width: 98vw;
             animation-duration: 0.5s;
-            animation-name: unshowNav;
+            animation-name: unshowMenu;
             animation-fill-mode: forwards;
         }
     }
@@ -96,12 +96,52 @@ nav{
         flex-direction: column;
         justify-content: space-between;
         height: 25px;
-        >div{
-        height: 4px;
-        width: 35px;
-        background-color: #0d5969;
-        border-radius: 20px;
-        }
+            >div{
+            height: 4px;
+            width: 35px;
+            background-color: #0d5969;
+            border-radius: 20px;
+            }
+            &.nav__burger--cross{
+                div:nth-child(1){
+                    animation-duration: 0.5s;
+                    animation-name: crossMenu1;
+                    animation-fill-mode: forwards;
+                    
+                }
+                div:nth-child(2){
+                    animation-duration: 0.05s;
+                    animation-name: crossMenu2;
+                    animation-fill-mode: forwards;
+                    
+                }
+                div:nth-child(3){
+                    animation-duration: 0.5s;
+                    animation-name: crossMenu3;
+                    animation-fill-mode: forwards;
+                    
+                }
+            }
+            &.nav__burger--burger{
+                div:nth-child(1){
+                    animation-duration: 0.5s;
+                    animation-name: burgerMenu1;
+                    animation-fill-mode: both;
+                    
+                }
+                div:nth-child(2){
+                    animation-duration: 0.5s;
+                    animation-name: burgerMenu2;
+                    animation-fill-mode: both;
+                    
+                }
+                div:nth-child(3){
+                    animation-duration: 0.5s;
+                    animation-name: burgerMenu3;
+                    animation-fill-mode: both;
+                    
+                }
+            }
     }
     .nav__contact{
         margin-left: auto;
@@ -131,7 +171,7 @@ nav{
 
 }
 
-@keyframes showNav {
+@keyframes showMenu {
     from {
         top: -40vh;
     }
@@ -139,7 +179,7 @@ nav{
         top: 20vh;
     }
   }
-  @keyframes unshowNav {
+  @keyframes unshowMenu {
     from {
         top: 20vh;
     }
@@ -148,4 +188,52 @@ nav{
     }
   }
 
-  
+  @keyframes crossMenu1 {
+    from {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+    to {
+        transform: rotate(45deg) translate(8px, 5px);
+    }
+  }
+  @keyframes crossMenu2 {
+    from {
+        opacity: 100;
+    }
+    to {
+        opacity: 0;
+    }
+  }
+  @keyframes crossMenu3 {
+    from {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+    to {
+        transform: rotate(-45deg) translate(9px, -7px);
+    }
+  }
+
+  @keyframes burgerMenu1 {
+    from {
+        transform: rotate(45deg) translate(8px, 5px);
+    }
+    to {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+  }
+  @keyframes burgerMenu2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+  }
+  @keyframes burgerMenu3 {
+    from {
+        transform: rotate(-45deg) translate(9px, -7px);
+    }
+    to {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+  }

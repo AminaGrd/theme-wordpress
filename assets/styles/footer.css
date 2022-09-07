@@ -13,7 +13,7 @@ footer .footer__infos .menu-navbar-container li {
   padding: 0.3vh 0vh;
 }
 footer .footer__infos .menu-navbar-container li:hover {
-  color: #00abda;
+  color: var(--mainBlue);
 }
 footer .footer__infos .footer__logo img {
   cursor: pointer;
