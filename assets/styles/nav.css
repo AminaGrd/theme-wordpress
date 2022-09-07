@@ -5,32 +5,39 @@ nav {
   align-items: center;
 }
 nav .nav__logo > img {
-  width: 18em;
-  margin: 20px 0px;
+  height: 8vh;
+  margin: 3vh 0;
 }
 nav #menu-navbar {
   display: flex;
   flex-direction: row;
 }
 nav #menu-navbar > li {
-  padding: 10px 15px;
+  padding: 2vh 15px;
   text-transform: uppercase;
+  font-size: 2vh;
+}
+nav #menu-navbar > li:hover a {
+  color: #00abda;
+  border-bottom: 3px #00abda solid;
+  padding-bottom: 5px;
 }
 nav .current-menu-item {
-  margin-bottom: 10px;
+  margin-bottom: 2vh;
 }
 nav .current-menu-item > a {
-  color: #0dc0e3;
-  border-bottom: 3px #0dc0e3 solid;
+  color: #00abda;
+  border-bottom: 3px #00abda solid;
   padding-bottom: 5px;
   font-weight: bold;
 }
 nav .nav__contact {
-  background-color: #0dc0e3;
+  background-color: #00abda;
   font-weight: bold;
   color: white;
   padding: 4px 15px;
-  font-size: 20px;
+  font-size: 2.5vh;
+  margin-bottom: 2vh;
 }
 nav .nav__contact > img {
   display: none;
@@ -47,16 +54,34 @@ nav .nav__contact > img {
   }
   nav .menu-navbar-container {
     display: none;
+    position: absolute;
   }
   nav .menu-navbar-container.menu-navbar-container--show {
     display: block;
     order: 3;
     min-width: 98vw;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-name: showNav;
+            animation-name: showNav;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  nav .menu-navbar-container.menu-navbar-container--unshow {
+    display: block;
+    order: 3;
+    min-width: 98vw;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-name: unshowNav;
+            animation-name: unshowNav;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
   nav #menu-navbar {
     flex-direction: column;
     align-items: center;
-    background-color: rgb(239, 239, 239);
+    background-color: rgba(245, 245, 245, 0.95);
   }
   nav .nav__burger {
     display: flex;
@@ -72,5 +97,39 @@ nav .nav__contact > img {
   }
   nav .nav__contact > img {
     display: inline;
+  }
+}
+
+@-webkit-keyframes showNav {
+  from {
+    top: -40vh;
+  }
+  to {
+    top: 20vh;
+  }
+}
+
+@keyframes showNav {
+  from {
+    top: -40vh;
+  }
+  to {
+    top: 20vh;
+  }
+}
+@-webkit-keyframes unshowNav {
+  from {
+    top: 20vh;
+  }
+  to {
+    top: -40vh;
+  }
+}
+@keyframes unshowNav {
+  from {
+    top: 20vh;
+  }
+  to {
+    top: -40vh;
   }
 }/*# sourceMappingURL=nav.css.map */

@@ -5,33 +5,42 @@ nav{
     align-items: center;
     .nav__logo{
         >img{
-            width: 18em;
-            margin: 20px 0px;
+            height: 8vh;
+            margin: 3vh 0;
         }
     }
     #menu-navbar{
     display: flex;
     flex-direction: row;
     >li{
-        padding: 10px 15px;
+        padding: 2vh 15px;
         text-transform: uppercase;
+        font-size: 2vh;
+        &:hover{
+            a{
+            color: #00abda;
+            border-bottom: 3px #00abda solid;
+            padding-bottom: 5px; 
+            }
+        }
     }
 }
 .current-menu-item{
-    margin-bottom: 10px;
+    margin-bottom: 2vh;
     >a{
-        color: #0dc0e3;
-        border-bottom: 3px #0dc0e3 solid;
+        color: #00abda;
+        border-bottom: 3px #00abda solid;
         padding-bottom: 5px;
         font-weight: bold;
     }
 }
 .nav__contact{
-    background-color: #0dc0e3;
+    background-color: #00abda;
     font-weight: bold;
     color: white;
     padding: 4px 15px;
-    font-size: 20px;
+    font-size: 2.5vh;
+    margin-bottom: 2vh;
     >img{
         display: none;
     }
@@ -52,16 +61,28 @@ nav{
         flex-wrap: wrap;
     .menu-navbar-container{
         display: none;
+        position: absolute;
         &.menu-navbar-container--show{
             display: block;
             order: 3;
             min-width: 98vw;
+            animation-duration: 0.5s;
+            animation-name: showNav;
+            animation-fill-mode: forwards;
+        }
+        &.menu-navbar-container--unshow{
+            display: block;
+            order: 3;
+            min-width: 98vw;
+            animation-duration: 0.5s;
+            animation-name: unshowNav;
+            animation-fill-mode: forwards;
         }
     }
     #menu-navbar{
         flex-direction: column;
         align-items: center;
-        background-color:rgb(239, 239, 239);
+        background-color:rgb(245, 245, 245, 0.95);
     }
     
     .nav__burger{
@@ -88,3 +109,21 @@ nav{
 
 }
 
+@keyframes showNav {
+    from {
+        top: -40vh;
+    }
+    to {
+        top: 20vh;
+    }
+  }
+  @keyframes unshowNav {
+    from {
+        top: 20vh;
+    }
+    to {
+        top: -40vh;
+    }
+  }
+
+  

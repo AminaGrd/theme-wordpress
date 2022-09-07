@@ -5,7 +5,6 @@ let i = 0;
 
 burger.addEventListener('click', function() {
     toogleMenu();
-    console.log("test")
 })
 inMenu.addEventListener('click', function() { // si on clique sur le menu
     if (i != 0) {

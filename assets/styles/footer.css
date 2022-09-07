@@ -9,6 +9,12 @@ footer .footer__infos {
   align-items: center;
   padding: 15px 0px;
 }
+footer .footer__infos .menu-navbar-container li {
+  padding: 0.3vh 0vh;
+}
+footer .footer__infos .menu-navbar-container li:hover {
+  color: #00abda;
+}
 footer .footer__infos .footer__logo img {
   width: 15em;
 }
@@ -37,6 +43,9 @@ footer .footer__credits {
 @media (max-width: 500px) {
   footer .footer__infos {
     flex-direction: column;
+  }
+  footer .footer__infos .menu-navbar-container {
+    display: none;
   }
   footer .footer__infos .footer__contact {
     text-align: center;

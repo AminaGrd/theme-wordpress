@@ -7,6 +7,14 @@ footer{
     justify-content: space-evenly;
     align-items: center;
     padding: 15px 0px;
+      .menu-navbar-container{
+        li{
+          padding: 0.3vh 0vh;
+          &:hover{
+            color: #00abda;
+          }
+        }
+      }
       .footer__logo img{
         width: 15em;
       }
@@ -40,6 +48,9 @@ footer{
 
     .footer__infos{
       flex-direction: column;
+      .menu-navbar-container{
+        display: none;
+      }
       .footer__contact{
         text-align: center;
         margin: 20px 0px;
