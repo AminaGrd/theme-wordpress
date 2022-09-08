@@ -178,7 +178,7 @@ nav .nav__contact > img {
     top: -300px;
   }
   to {
-    top: 150px;
+    top: 110px;
   }
 }
 
@@ -187,12 +187,12 @@ nav .nav__contact > img {
     top: -300px;
   }
   to {
-    top: 150px;
+    top: 110px;
   }
 }
 @-webkit-keyframes unshowMenu {
   from {
-    top: 150px;
+    top: 110px;
   }
   to {
     top: -300px;
@@ -200,7 +200,7 @@ nav .nav__contact > img {
 }
 @keyframes unshowMenu {
   from {
-    top: 150px;
+    top: 110px;
   }
   to {
     top: -300px;

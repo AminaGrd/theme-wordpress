@@ -1,4 +1,5 @@
 .content{
+    margin-bottom: 0;
     h1{
         background-color: var(--mainBlue);
         color: white;
@@ -15,7 +16,6 @@
         color: var(--mainBlueDark);
         text-align: center;
         font-style: italic;
-        // font-family: "OpenSans-Regular";
         font-size: 1.8rem;
         padding: 2vh;
     }
@@ -23,7 +23,7 @@
         background-color: var(--mainBlueAlpha);
         color: var(--mainBlueDark);
         text-align: center;
-        margin: 1vh 0;
+        margin: 4vh 0 2vh 0;
         font-size: 1.1rem;
         padding: 1vh;
         em{
@@ -31,10 +31,24 @@
         }
     }
     p{
-        margin: 2vh 12vw;
-        text-align: center;
+        padding: 1.5vh 12vw;
+        text-align: justify;
         strong{
             color: var(--mainBlueDark);
+        }
+        &:last-child{
+            padding-bottom: 5vw;
+        }
+    }
+    ul{
+        margin: 0 13vw;
+        li{
+            padding-left: 2vw;
+            padding-bottom: 3vh;
+            border-left: 2px var(--mainBlue) solid;
+            &:last-child{
+                padding-bottom: 0;
+            }
         }
     }
     .wp-block-button{
@@ -49,8 +63,149 @@
                 background-color: var(--mainBlueDark);
             }
             &:active{
+                background-color: var(--mainBlueDark);
                 box-shadow: inset 2px 2px 5px #001f28;
             }
         }
     }
+    .wp-block-columns{
+        margin: 5vh 12vw;
+        .wp-block-column{
+            margin-right: 2vw;
+            padding: 7vh 0;
+            background-color: var(--mainBlueDark);
+            &:last-child{
+                margin-right: 0;
+            }
+            p{
+                padding:unset;
+                text-align: center;
+                color: white;
+            }
+            ul{
+                margin: 0 0 0 2vw;
+                
+                li{
+                    padding: 1vh 10px;
+                color: white;
+                }
+            }
+        }
+    }
+    .wpcf7-form{
+        background-color: lightgrey;
+        color: white;
+        padding: 2vh 0;
+        margin-top: 3vh;
+        p{
+            margin: 2vh 15vw;
+            border: 2px solid white;
+            padding: 1vh;
+            label{
+                color: var(--mainBlueDark);
+                .wpcf7-text{
+                    background-color: white;
+                    color: black;
+                }
+                .wpcf7-textarea{
+                    background-color: white;
+                    color: black;
+                }
+            }
+            .wpcf7-submit{
+                background-color: var(--mainBlue);
+                text-align: center;
+                padding: 1.5vh 3vh;
+                &:hover{
+                    background-color: var(--mainBlueDark);
+                }
+                &:active{
+                    background-color: var(--mainBlueDark);
+                    box-shadow: inset 2px 2px 5px #001f28;
+                }
+            }
+        }
+        p:nth-last-child(2){
+            border: none;
+            display: flex;
+            justify-content: end;
+        }
+        .wpcf7-response-output{
+            color: red;
+            margin: 0 15vw;
+        }
+    }
+
+
+@media (max-width: 850px){
+    h1{
+        font-size: 1.8rem;
+    }
+    h2{
+        font-size: 1.4rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
+    .wp-block-button{
+        font-size: 0.9rem;
+        .wp-block-button__link{
+            margin-top: 4vh;
+        }
+    }
+}
+@media (max-width: 780px){
+    .wp-block-columns{
+        .wp-block-column{
+            margin-right: 0;
+            margin-bottom: 3vh;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            ul{
+                margin: 0 0 0 5vw;
+                li{
+                    padding-left: 5vw;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px){
+    .wpcf7-form{
+        p{
+            margin: 0;
+            border-right: none;
+            border-left: none;
+            border-top: none;
+            text-align: center;
+            label{
+                .wpcf7-text{
+                    display: inline;
+                    width: 80vw;
+                }
+                .wpcf7-textarea{
+                    display: inline;
+                    width: 80vw;
+                }
+            }
+        }
+        .wpcf7-response-output{
+            margin: 0;
+        }
+        p{
+            .wpcf7-submit{
+                padding: 2vh 8vw;
+                margin: 2vh 0;
+                font-size: 1.3rem;
+            }
+        }
+        p:nth-last-child(2){
+            justify-content: center;
+        }
+    }
+    
+}
+
 }
