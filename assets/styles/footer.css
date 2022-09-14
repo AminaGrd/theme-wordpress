@@ -1,3 +1,4 @@
+@charset "UTF-8";
 footer {
   background-color: black;
   color: white;
@@ -39,7 +40,22 @@ footer .footer__infos .footer__contact #footer__contactRS .footer__contactRS img
 }
 footer .footer__credits {
   text-align: center;
-  padding: 5px 0px;
+  padding: 10px 0px;
+}
+footer .footer__credits .menu-footer-container #menu-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+footer .footer__credits .menu-footer-container #menu-footer li:hover {
+  color: var(--mainBlue);
+}
+footer .footer__credits .menu-footer-container #menu-footer li:first-child {
+  margin-right: 1vw;
+}
+footer .footer__credits .menu-footer-container #menu-footer li:last-child {
+  list-style-type: "⎹";
+  padding-left: 1vw;
 }
 @media (max-width: 500px) {
   footer .footer__infos {

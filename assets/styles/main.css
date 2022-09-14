@@ -3,6 +3,8 @@
   --mainBlue: #00abda;
   --mainBlueAlpha: #00abda91;
   --mainBlueDark: #00485c;
+  --mainBlueBckgrd: #00abda60;
+  --mainGreyBckgrd: rgb(242, 242, 242);
 }
 
 @font-face {

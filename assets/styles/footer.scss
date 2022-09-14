@@ -42,7 +42,26 @@ footer{
   }
   .footer__credits{
     text-align: center;
-    padding: 5px 0px;
+    padding: 10px 0px;
+    .menu-footer-container{
+      #menu-footer{
+        display: flex;
+      flex-direction: row;
+      justify-content: center;
+        li{
+          &:hover{
+            color: var(--mainBlue);
+          }
+          &:first-child{
+            margin-right: 1vw;
+          }
+          &:last-child{
+            list-style-type: "\23B9";
+            padding-left: 1vw;
+          }
+        }
+      }
+    }
   }
 
 @media (max-width: 500px){

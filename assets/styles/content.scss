@@ -1,12 +1,12 @@
 .content{
     margin-bottom: 0;
+    
     h1{
         background-color: var(--mainBlue);
         color: white;
         text-align: center;
         font-size: 2.5rem;
         padding: 20px 2vh;
-        margin-bottom: 2vh;
         font-weight: bold;
         em{
             font-style: normal;
@@ -17,7 +17,7 @@
         text-align: center;
         font-style: italic;
         font-size: 1.8rem;
-        padding: 2vh;
+        padding: 4vh 2vh;
     }
     h3{
         background-color: var(--mainBlueAlpha);
@@ -32,24 +32,60 @@
     }
     p{
         padding: 1.5vh 12vw;
-        text-align: justify;
+        text-align: left;
         strong{
             color: var(--mainBlueDark);
         }
-        &:last-child{
-            padding-bottom: 5vw;
+        &:first-child{
+            padding-top: 3vw;
         }
     }
     ul{
-        margin: 0 13vw;
+        margin: 2vh 13vw;
         li{
-            padding-left: 2vw;
+            padding-left: 1vw;
             padding-bottom: 3vh;
-            border-left: 2px var(--mainBlue) solid;
             &:last-child{
                 padding-bottom: 0;
             }
+            &::before {
+                content: "";
+                background-image: url(../ico/puce-li.png);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 1.5rem;
+                height: 1.5rem;
+                display: inline-block;
+                margin-right: 0.5rem;
+                position: relative;
+                top: 3px;
+            }
         }
+        &.ul__cards{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            width: 100%;
+            li{
+                min-width: 13rem;
+                width: 20rem;
+                margin-right: 1rem;
+                margin-top: 1vh;
+                padding-bottom: 1vh;
+                padding-top: 1vh;
+            }
+        }
+    }
+    .content__standard{
+        padding-top: 4vh;
+        padding-bottom: 6vh;
+    }
+    .blue{
+        background-color: var(--mainBlueBckgrd);
+    }
+    .grey{
+        background-color: var(--mainGreyBckgrd);
     }
     .wp-block-button{
         display: flex;
@@ -92,24 +128,50 @@
             }
         }
     }
+    .flex__contact{
+        display: flex;
+        flex-direction: row;
+        >div{
+            width: 50%;
+        }
+        .contact__infos{
+            >p{
+                padding-left: 2vw;
+            }
+            >iframe{
+                display: inline;
+                text-align: center;
+                width: 90%;
+                height: 300px;
+                margin-top: 2vh;
+                margin-left: 5%;
+            }
+        }
+    }
     .wpcf7-form{
-        background-color: lightgrey;
+        background-color: var(--mainBlueBckgrd);
         color: white;
-        padding: 2vh 0;
-        margin-top: 3vh;
+        padding: 2vh 4vw;
         p{
-            margin: 2vh 15vw;
-            border: 2px solid white;
             padding: 1vh;
             label{
                 color: var(--mainBlueDark);
                 .wpcf7-text{
                     background-color: white;
                     color: black;
+                    width: 100%;
+                    height: 4vh;
                 }
                 .wpcf7-textarea{
                     background-color: white;
                     color: black;
+                    width: 100%;
+                }
+                .wpcf7-select{
+                    background-color: white;
+                    color: black;
+                    width: 100%;
+                    height: 4vh;
                 }
             }
             .wpcf7-submit{
@@ -173,39 +235,15 @@
 }
 
 @media (max-width: 500px){
-    .wpcf7-form{
-        p{
-            margin: 0;
-            border-right: none;
-            border-left: none;
-            border-top: none;
-            text-align: center;
-            label{
-                .wpcf7-text{
-                    display: inline;
-                    width: 80vw;
-                }
-                .wpcf7-textarea{
-                    display: inline;
-                    width: 80vw;
-                }
+    .flex__contact{
+        flex-direction: column;
+        >div{
+            width: 100%;
+            &:last-child{
+                margin-top: 5vh;
             }
-        }
-        .wpcf7-response-output{
-            margin: 0;
-        }
-        p{
-            .wpcf7-submit{
-                padding: 2vh 8vw;
-                margin: 2vh 0;
-                font-size: 1.3rem;
-            }
-        }
-        p:nth-last-child(2){
-            justify-content: center;
         }
     }
-    
 }
 
 }
