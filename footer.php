@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="footer__credits">
-            <p><?php wp_nav_menu( array( 'menu' => 'footer' ) ); ?></p>
+            <?php wp_nav_menu( array( 'menu' => 'footer' ) ); ?>
         </div>
     </footer>
     <script src="<?php bloginfo('template_directory'); ?>/assets/scripts/nav.js"></script>
