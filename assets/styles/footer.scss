@@ -2,43 +2,57 @@ footer{
   background-color: black;
   color: white;
   .footer__infos{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    max-width: 70rem;
+    margin: auto;
     padding: 15px 0px;
-      .menu-navbar-container{
-        li{
-          padding: 0.3vh 0vh;
-          &:hover{
-            color: var(--mainBlue);
-          }
+    &.row{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .menu-navbar-container{
+      li{
+        padding: 0.3vh 0vh;
+        &:hover{
+          color: var(--mainBlue);
         }
       }
-      .footer__logo img{
+    }
+    #footer__phone{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 15px 0;
+      img{
+        width: 25px;
+        margin: 0px 10px;
+      }
+    }
+    .footer__logo{
+      img{
         cursor: pointer;
         width: 15em;
       }
-      .footer__contact{
-        text-align: right;
-        .bold{
-          font-weight: bold;
-        }
-        p{
-          margin: 20px 0px;
-        }
-        #footer__contactRS{
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-end;
-          .footer__contactRS{
-            img{
-              width: 30px;
-              margin: 0px 10px;
-            }
+    }
+    .footer__contact{
+      text-align: right;
+      .bold{
+        font-weight: bold;
+      }
+      #footer__contactRS{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 10px;
+        .footer__contactRS{
+          img{
+            width: 30px;
+            margin: 0px 10px;
           }
         }
       }
+    }
   }
   .footer__credits{
     text-align: center;
@@ -64,12 +78,17 @@ footer{
     }
   }
 
-@media (max-width: 500px){
+@media (max-width: 520px){
 
     .footer__infos{
-      flex-direction: column;
+      &.row{
+        flex-direction: column;
+      }
       .menu-navbar-container{
         display: none;
+      }
+      #footer__phone{
+        margin: 30px 0;
       }
       .footer__contact{
         text-align: center;

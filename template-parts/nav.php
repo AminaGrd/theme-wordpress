@@ -1,4 +1,4 @@
-<nav>
+<nav class="nav--row">
     <div class="nav__logo">
         <img onclick="location.href='<?php bloginfo('wpurl'); ?>';" src="<?php bloginfo('wpurl'); ?>/wp-content/uploads/2022/09/Experience-logo-2022-Q.png" alt="icone du site">
     </div>

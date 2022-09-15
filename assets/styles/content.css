@@ -33,6 +33,9 @@
   color: var(--mainBlue);
   margin-top: 8vh;
 }
+.content h4 strong {
+  color: var(--mainBlue);
+}
 .content p:first-child {
   padding-top: 3rem;
 }
@@ -45,6 +48,7 @@
 .content ul li {
   padding-bottom: 3vh;
   margin: 0 3rem 0 0;
+  font-size: 0.95rem;
 }
 .content ul li:last-child {
   padding-bottom: 0;
@@ -77,6 +81,13 @@
 }
 .content .content__standard {
   padding: 2vh var(--mainpaddingLeftRight) 6vh var(--mainpaddingLeftRight);
+}
+.content .content__standard .content__container--partner {
+  margin-top: 8vh;
+}
+.content .content__standard .content__container--partner p {
+  padding: 2vh 0;
+  margin: 0;
 }
 .content * > * {
   max-width: 70rem;

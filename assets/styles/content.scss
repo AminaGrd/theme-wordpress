@@ -32,6 +32,9 @@
     h4{
         color: var(--mainBlue);
         margin-top: 8vh;
+        strong{
+            color: var(--mainBlue);
+        }
     }
     p{
         &:first-child{
@@ -49,6 +52,7 @@
             // padding-left: 1vw;
             padding-bottom: 3vh;
             margin: 0 3rem 0 0;
+            font-size: 0.95rem;
             &:last-child{
                 padding-bottom: 0;
             }
@@ -83,6 +87,13 @@
     }
     .content__standard{
         padding: 2vh var(--mainpaddingLeftRight) 6vh var(--mainpaddingLeftRight);
+        .content__container--partner{
+            margin-top: 8vh;
+            p{
+                padding: 2vh 0;
+                margin: 0;
+            }
+        }
     }
     *{
         >*{
