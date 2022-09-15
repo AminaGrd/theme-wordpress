@@ -14,7 +14,7 @@ nav{
     display: flex;
     flex-direction: row;
     >li{
-        padding: 1rem 15px;
+        padding: 1.9rem 15px 1rem 15px;
         text-transform: uppercase;
         font-size: 0.9rem;
         &:hover{
@@ -39,9 +39,8 @@ nav{
     background-color: var(--mainBlue);
     font-weight: bold;
     color: white;
-    padding: 4px 15px;
+    padding: 0.5rem 0.8rem;
     font-size: 1.1rem;
-    margin-bottom: 8px;
         >img{
             display: none;
         }
@@ -51,19 +50,11 @@ nav{
 
 
 nav{
-@media screen and (max-width: 1265px){
-    
-    .nav__contact{
-        background-color: transparent;
-        a{
-            display: none;
-        }
-    }
-}
 
-    @media screen and (max-width: 1110px){
+    @media screen and (max-width: 1124px){
         flex-wrap: wrap;
-        margin: 15px;
+        margin-right: 15px;
+        margin-left: 15px;
     .menu-navbar-container{
         display: none;
         position: absolute;
@@ -145,16 +136,18 @@ nav{
     }
     .nav__contact{
         margin-left: auto;
+        background-color: transparent;
+        a{
+            display: none;
+        }
         img{
             cursor: pointer;
             display: block;
             height: 3rem;
-            position: relative;
-            top: 5px;
             margin-right: 1rem;
         }
     }
-}
+
 @media (max-width: 500px){
     .nav__logo{
         >img{
@@ -173,18 +166,18 @@ nav{
 
 @keyframes showMenu {
     from {
-        top: -300px;
+        top: -320px;
     }
     to {
-        top: 110px;
+        top: 85px;
     }
   }
   @keyframes unshowMenu {
     from {
-        top: 110px;
+        top: 85px;
     }
     to {
-        top: -300px;
+        top: -320px;
     }
   }
 
@@ -237,3 +230,4 @@ nav{
         transform: rotate(0deg) translate(0px, 0px);
     }
   }
+}

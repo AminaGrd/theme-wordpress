@@ -98,7 +98,7 @@
     }
     
     .content__standard{
-        padding: 2vh var(--mainpaddingLeftRight) 6vh var(--mainpaddingLeftRight);
+        padding: 2vh calc(var(--mainpaddingLeftRight)/2) 6vh calc(var(--mainpaddingLeftRight)/2);
         .content__container--partner{
             margin-top: 8vh;
             p{

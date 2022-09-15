@@ -1,6 +1,6 @@
 .headOfLanding {
   z-index: -1;
-  height: 80vh;
+  height: calc(100vh - 6rem);
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -16,10 +16,15 @@
   color: white;
   padding: 0.9rem;
   text-transform: uppercase;
-  font-size: var(--mainSizeH1);
+  font-size: calc(var(--mainSizeH1) / 2);
 }
 @media screen and (max-width: 600px) {
   .headOfLanding h1 {
     font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .headOfLanding {
+    height: calc(100vh - 5.5rem);
   }
 }/*# sourceMappingURL=headOfLanding.css.map */

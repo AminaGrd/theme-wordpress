@@ -75,7 +75,7 @@ footer .footer__credits .menu-footer-container #menu-footer li:last-child {
     margin-left: 2vw;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 650px) {
   footer .footer__infos.row {
     flex-direction: column;
   }
