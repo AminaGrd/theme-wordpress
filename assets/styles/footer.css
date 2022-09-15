@@ -69,7 +69,13 @@ footer .footer__credits .menu-footer-container #menu-footer li:last-child {
   list-style-type: "⎹";
   padding-left: 1vw;
 }
-@media (max-width: 520px) {
+@media (max-width: 1060px) {
+  footer .footer__infos {
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
+}
+@media (max-width: 550px) {
   footer .footer__infos.row {
     flex-direction: column;
   }

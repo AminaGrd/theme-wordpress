@@ -77,8 +77,13 @@ footer{
       }
     }
   }
-
-@media (max-width: 520px){
+@media (max-width: 1060px){
+  .footer__infos{
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
+}
+@media (max-width: 550px){
 
     .footer__infos{
       &.row{

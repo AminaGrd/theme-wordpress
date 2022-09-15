@@ -45,6 +45,17 @@
 .content strong {
   color: var(--mainBlueDark);
 }
+.content .content__bckgd--white {
+  background-color: white;
+}
+.content ul.content__bckgd--white {
+  background-color: white;
+  padding: 2rem;
+}
+.content ul.content__bckgd--grey {
+  background-color: var(--mainGreyBckgrd);
+  padding: 2rem;
+}
 .content ul li {
   padding-bottom: 3vh;
   margin: 0 3rem 0 0;

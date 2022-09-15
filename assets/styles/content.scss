@@ -47,7 +47,18 @@
     strong{
         color: var(--mainBlueDark);
     }
+    .content__bckgd--white{
+        background-color: white;
+    }
     ul{
+        &.content__bckgd--white{
+            background-color: white;
+            padding: 2rem;
+        }
+        &.content__bckgd--grey{
+            background-color: var(--mainGreyBckgrd);
+            padding: 2rem;
+        }
         li{
             // padding-left: 1vw;
             padding-bottom: 3vh;
@@ -85,6 +96,7 @@
             }
         }
     }
+    
     .content__standard{
         padding: 2vh var(--mainpaddingLeftRight) 6vh var(--mainpaddingLeftRight);
         .content__container--partner{
