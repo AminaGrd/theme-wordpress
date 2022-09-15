@@ -11,12 +11,12 @@
   position: absolute;
   bottom: 0;
   background-color: var(--mainBlueAlpha);
-  width: 100%;
+  width: 70rem;
   text-align: center;
   color: white;
   padding: 0.9rem;
   text-transform: uppercase;
-  font-size: 1.6rem;
+  font-size: var(--mainSizeH1);
 }
 @media screen and (max-width: 600px) {
   .headOfLanding h1 {

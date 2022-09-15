@@ -1,51 +1,50 @@
 .content {
-  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
 }
 .content h1 {
   background-color: var(--mainBlue);
   color: white;
-  text-align: center;
-  font-size: 2.5rem;
-  padding: 20px 2vh;
+  padding: 2rem 0.75rem;
+  font-size: var(--mainSizeH1);
   font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
 }
 .content h1 em {
   font-style: normal;
 }
 .content h2 {
-  color: var(--mainBlueDark);
-  text-align: center;
-  font-style: italic;
-  font-size: 1.8rem;
-  padding: 4vh 2vh;
+  color: var(--mainBlue);
+  font-size: var(--mainSizeH2);
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .content h3 {
-  background-color: var(--mainBlueAlpha);
-  color: var(--mainBlueDark);
-  text-align: center;
-  margin: 4vh 0 2vh 0;
-  font-size: 1.1rem;
-  padding: 1vh;
+  color: var(--mainGrey);
+  font-size: var(--mainSizeH3);
+  margin-top: 6vh;
+  margin-bottom: 4vh;
 }
 .content h3 em {
   font-style: normal;
 }
-.content p {
-  padding: 1.5vh 12vw;
-  text-align: left;
-}
-.content p strong {
-  color: var(--mainBlueDark);
+.content h4 {
+  color: var(--mainBlue);
+  margin-top: 8vh;
 }
 .content p:first-child {
-  padding-top: 3vw;
+  padding-top: 3rem;
 }
-.content ul {
-  margin: 2vh 13vw;
+.content p:last-child {
+  padding-bottom: 3rem;
+}
+.content strong {
+  color: var(--mainBlueDark);
 }
 .content ul li {
-  padding-left: 1vw;
   padding-bottom: 3vh;
+  margin: 0 3rem 0 0;
 }
 .content ul li:last-child {
   padding-bottom: 0;
@@ -72,14 +71,18 @@
 .content ul.ul__cards li {
   min-width: 13rem;
   width: 20rem;
-  margin-right: 1rem;
   margin-top: 1vh;
   padding-bottom: 1vh;
   padding-top: 1vh;
 }
 .content .content__standard {
-  padding-top: 4vh;
-  padding-bottom: 6vh;
+  padding: 2vh var(--mainpaddingLeftRight) 6vh var(--mainpaddingLeftRight);
+}
+.content * > * {
+  max-width: 70rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1.5rem;
 }
 .content .blue {
   background-color: var(--mainBlueBckgrd);
@@ -88,14 +91,15 @@
   background-color: var(--mainGreyBckgrd);
 }
 .content .wp-block-button {
-  display: flex;
-  justify-content: center;
+  display: block;
+  text-align: right;
 }
 .content .wp-block-button .wp-block-button__link {
+  width: 28rem;
   background-color: var(--mainBlue);
   border-radius: 0px;
   margin-top: 2vh;
-  margin-bottom: 8vh;
+  margin-bottom: 3vh;
 }
 .content .wp-block-button .wp-block-button__link:hover {
   background-color: var(--mainBlueDark);
@@ -134,24 +138,39 @@
 .content .flex__contact > div {
   width: 50%;
 }
+.content .flex__contact .contact__infos {
+  margin: 0;
+}
 .content .flex__contact .contact__infos > p {
   padding-left: 2vw;
+}
+.content .flex__contact .contact__infos > p:first-child {
+  margin-top: 0;
 }
 .content .flex__contact .contact__infos > iframe {
   display: inline;
   text-align: center;
   width: 90%;
   height: 300px;
-  margin-top: 2vh;
+  margin-top: 10vh;
   margin-left: 5%;
+}
+.content .flex__contact .contact__form {
+  margin: 0;
+}
+.content .flex__contact .contact__form .wp-block-contact-form-7-contact-form-selector {
+  margin: 0;
+}
+.content .flex__contact .contact__form .wp-block-contact-form-7-contact-form-selector .wpcf7 {
+  margin: 0;
+}
+.content .flex__contact .contact__form .wp-block-contact-form-7-contact-form-selector .wpcf7 form {
+  margin: 0;
 }
 .content .wpcf7-form {
   background-color: var(--mainBlueBckgrd);
   color: white;
   padding: 2vh 4vw;
-}
-.content .wpcf7-form p {
-  padding: 1vh;
 }
 .content .wpcf7-form p label {
   color: var(--mainBlueDark);
@@ -172,6 +191,14 @@
   color: black;
   width: 100%;
   height: 4vh;
+}
+.content .wpcf7-form p label .wpcf7-form-control {
+  background-color: white;
+  color: black;
+  width: 100%;
+}
+.content .wpcf7-form p label input {
+  margin-top: 1vh;
 }
 .content .wpcf7-form p .wpcf7-submit {
   background-color: var(--mainBlue);
@@ -196,19 +223,22 @@
 }
 @media (max-width: 850px) {
   .content h1 {
-    font-size: 1.8rem;
+    font-size: calc(var(--mainSizeH1) - 0.6rem);
   }
   .content h2 {
-    font-size: 1.4rem;
+    font-size: calc(var(--mainSizeH2) - 0.3rem);
   }
   .content h3 {
-    font-size: 1rem;
+    font-size: calc(var(--mainSizeH3) - 0.3rem);
   }
   .content .wp-block-button {
     font-size: 0.9rem;
   }
   .content .wp-block-button .wp-block-button__link {
     margin-top: 4vh;
+  }
+  .content ul li {
+    margin-right: 2rem;
   }
 }
 @media (max-width: 780px) {
@@ -225,6 +255,9 @@
   .content .wp-block-columns .wp-block-column ul li {
     padding-left: 5vw;
   }
+  .content ul.ul__cards li {
+    width: 30rem;
+  }
 }
 @media (max-width: 500px) {
   .content .flex__contact {
@@ -235,5 +268,11 @@
   }
   .content .flex__contact > div:last-child {
     margin-top: 5vh;
+  }
+  .content .wp-block-button .wp-block-button__link {
+    width: 100%;
+  }
+  .content ul li {
+    margin-right: 0;
   }
 }/*# sourceMappingURL=content.css.map */
