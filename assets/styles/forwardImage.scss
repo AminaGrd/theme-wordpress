@@ -6,17 +6,17 @@
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    h1{
-        position: absolute;
-        bottom: 0;
-        background-color: var(--mainBlueAlpha);
-        width: 100%;
-        text-align: center;
-        color: white;
-        padding: 0.9rem;
-        text-transform: uppercase;
-        font-size: calc(var(--mainSizeH1)/2);
-    }
+    // h1{
+    //     position: absolute;
+    //     bottom: 0;
+    //     background-color: var(--mainBlueAlpha);
+    //     width: 100%;
+    //     text-align: center;
+    //     color: white;
+    //     padding: 0.9rem;
+    //     text-transform: uppercase;
+    //     font-size: calc(var(--mainSizeH1)/2);
+    // }
 
     @media screen and (max-width: 600px){
         h1{

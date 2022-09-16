@@ -1,12 +1,14 @@
 @charset "UTF-8";
 footer {
-  background-color: black;
+  background-image: url(../img/fond-carbone-baner.jpg);
+  background-size: cover;
+  background-position: center;
   color: white;
 }
 footer .footer__infos {
   max-width: 70rem;
   margin: auto;
-  padding: 15px 0px;
+  padding: 25px 0px;
 }
 footer .footer__infos.row {
   display: flex;
@@ -28,7 +30,7 @@ footer .footer__infos #footer__phone {
 }
 footer .footer__infos #footer__phone img {
   width: 25px;
-  margin: 0px 10px;
+  margin: 0 10px 0 0;
 }
 footer .footer__infos .footer__logo img {
   cursor: pointer;
@@ -51,8 +53,9 @@ footer .footer__infos .footer__contact #footer__contactRS .footer__contactRS img
   margin: 0px 10px;
 }
 footer .footer__credits {
+  background-color: rgba(0, 0, 0, 0.8);
   text-align: center;
-  padding: 10px 0px;
+  padding: 6px 0px;
 }
 footer .footer__credits .menu-footer-container #menu-footer {
   display: flex;

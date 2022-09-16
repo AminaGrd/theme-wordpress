@@ -1,10 +1,12 @@
 footer{
-  background-color: black;
+  background-image: url(../img/fond-carbone-baner.jpg);
+  background-size: cover;
+  background-position: center;
   color: white;
   .footer__infos{
     max-width: 70rem;
     margin: auto;
-    padding: 15px 0px;
+    padding: 25px 0px;
     &.row{
       display: flex;
       flex-direction: row;
@@ -26,7 +28,7 @@ footer{
       margin: 15px 0;
       img{
         width: 25px;
-        margin: 0px 10px;
+        margin: 0 10px 0 0;
       }
     }
     .footer__logo{
@@ -55,8 +57,9 @@ footer{
     }
   }
   .footer__credits{
+    background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
-    padding: 10px 0px;
+    padding: 6px 0px;
     .menu-footer-container{
       #menu-footer{
         display: flex;
