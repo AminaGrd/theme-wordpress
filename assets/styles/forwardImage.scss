@@ -1,0 +1,27 @@
+.forwardImage{
+    z-index: -1;
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    h1{
+        position: absolute;
+        bottom: 0;
+        background-color: var(--mainBlueAlpha);
+        width: 100%;
+        text-align: center;
+        color: white;
+        padding: 0.9rem;
+        text-transform: uppercase;
+        font-size: calc(var(--mainSizeH1)/2);
+    }
+
+    @media screen and (max-width: 600px){
+        h1{
+            font-size: 1.2rem;
+        }
+        height: calc(100vh - 30rem);
+    }
+}

@@ -30,10 +30,11 @@ if (!isset($this_name)||empty($this_name)) {
     <?php
     if (is_front_page() ===  true) {
         get_template_part( 'template-parts/headOfLanding' );
-    } else {
-        ?>
-        <!-- <h1 class="page_title"><script>document.write(bodyTitle);</script></h1> -->
-        <?php
+    } else {?>
+        <?php $page = get_the_ID();
+            if($page === 8 || $page === 13 || $page === 17) {
+            get_template_part( 'template-parts/forwardImage' );?>
+        <?php };
     }
 ?>
 

@@ -3,9 +3,9 @@
   flex-direction: column;
 }
 .content h1 {
-  background-color: var(--mainBlue);
+  background: url(../img/fond-carbone-baner.jpg) center;
   color: white;
-  padding: 2rem 0.75rem;
+  padding: 4rem 0.75rem;
   font-size: var(--mainSizeH1);
   font-weight: bold;
   text-align: center;
@@ -111,6 +111,18 @@
 }
 .content .grey {
   background-color: var(--mainGreyBckgrd);
+}
+.content .carbone {
+  background: url(../img/fond-carbone-baner.jpg) center;
+}
+.content .carbone h2 {
+  color: white;
+}
+.content .carbone p {
+  color: white;
+}
+.content .carbone p strong {
+  color: white;
 }
 .content .wp-block-button {
   display: block;
@@ -245,6 +257,7 @@
 @media (max-width: 850px) {
   .content h1 {
     font-size: calc(var(--mainSizeH1) - 0.6rem);
+    padding: 2rem 0.75rem;
   }
   .content h2 {
     font-size: calc(var(--mainSizeH2) - 0.3rem);
