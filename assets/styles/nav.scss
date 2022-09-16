@@ -1,8 +1,16 @@
 nav{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-evenly;
-    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    width: 100vw;
+    z-index: 1;
+    &.nav--row{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+        align-items: center;
+    }
+    
     .nav__logo{
         >img{
             cursor: pointer;
@@ -13,21 +21,52 @@ nav{
     #menu-navbar{
     display: flex;
     flex-direction: row;
-    >li{
-        padding: 1.9rem 15px 1rem 15px;
-        text-transform: uppercase;
-        font-size: 0.9rem;
+    .menu-item-has-children{
         &:hover{
+            .sub-menu{
+                display: block;
+            }
+        }
+        .sub-menu{
+        display: none;
+        position: absolute;
+        top: 4rem;
+        background-color: var(--mainGreyBckgrd);
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15);
+        min-width: 9.2rem;
+        margin-left: -0.8rem;
+        li{
+            padding: 1.2rem 1rem;
+            border-bottom: 1px solid white;
+            &:last-child{
+                border: none;
+            }
             a{
-            color: var(--mainBlue);
-            border-bottom: 3px var(--mainBlue) solid;
-            padding-bottom: 5px; 
+                border: none;
+                color: var(--mainGrey);
+                font-size: 0.8rem;
+                text-transform: none;
+                &:hover{
+                    color: var(--mainBlue);
+                }
             }
         }
     }
-}
+    }
+        >li{
+            padding: 1rem 15px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            &:hover{
+                a{
+                color: var(--mainBlue);
+                border-bottom: 3px var(--mainBlue) solid;
+                padding-bottom: 5px; 
+                }
+            }
+        }
+    }
 .current-menu-item{
-    margin-bottom: 2vh;
     >a{
         color: var(--mainBlue);
         border-bottom: 3px var(--mainBlue) solid;
@@ -52,9 +91,11 @@ nav{
 nav{
 
     @media screen and (max-width: 1124px){
-        flex-wrap: wrap;
-        margin-right: 15px;
-        margin-left: 15px;
+        &.nav--row{
+            flex-wrap: wrap;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
     .menu-navbar-container{
         display: none;
         position: absolute;
@@ -79,7 +120,33 @@ nav{
         flex-direction: column;
         align-items: center;
         background-color:rgb(255, 255, 255, 0.95);
+        >li{
+            width: 100%;
+            text-align: center;
+            padding: 1rem 0;
+            border-bottom: 0.5px solid var(--mainBlueDark);
+        }
+        .menu-item-has-children{
+            .sub-menu{
+            display: block;
+            position: relative;
+            left: 0;
+            top: 1rem;
+            margin: 0;
+            box-shadow: none;
+            background-color: var(--mainBlueAlpha);
+            li{
+                border-bottom: 0.5px solid white;
+                padding: 0.8rem;
+                a{
+                    color: white;
+                }
+            }
+            }
+        }
+        
     }
+    
     
     .nav__burger{
         cursor: pointer;
@@ -166,7 +233,7 @@ nav{
 
 @keyframes showMenu {
     from {
-        top: -320px;
+        top: -400px;
     }
     to {
         top: 85px;
@@ -177,7 +244,7 @@ nav{
         top: 85px;
     }
     to {
-        top: -320px;
+        top: -400px;
     }
   }
 

@@ -1,4 +1,12 @@
 nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  width: 100vw;
+  z-index: 1;
+}
+nav.nav--row {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -13,8 +21,36 @@ nav #menu-navbar {
   display: flex;
   flex-direction: row;
 }
+nav #menu-navbar .menu-item-has-children:hover .sub-menu {
+  display: block;
+}
+nav #menu-navbar .menu-item-has-children .sub-menu {
+  display: none;
+  position: absolute;
+  top: 4rem;
+  background-color: var(--mainGreyBckgrd);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  min-width: 9.2rem;
+  margin-left: -0.8rem;
+}
+nav #menu-navbar .menu-item-has-children .sub-menu li {
+  padding: 1.2rem 1rem;
+  border-bottom: 1px solid white;
+}
+nav #menu-navbar .menu-item-has-children .sub-menu li:last-child {
+  border: none;
+}
+nav #menu-navbar .menu-item-has-children .sub-menu li a {
+  border: none;
+  color: var(--mainGrey);
+  font-size: 0.8rem;
+  text-transform: none;
+}
+nav #menu-navbar .menu-item-has-children .sub-menu li a:hover {
+  color: var(--mainBlue);
+}
 nav #menu-navbar > li {
-  padding: 1.9rem 15px 1rem 15px;
+  padding: 1rem 15px;
   text-transform: uppercase;
   font-size: 0.9rem;
 }
@@ -22,9 +58,6 @@ nav #menu-navbar > li:hover a {
   color: var(--mainBlue);
   border-bottom: 3px var(--mainBlue) solid;
   padding-bottom: 5px;
-}
-nav .current-menu-item {
-  margin-bottom: 2vh;
 }
 nav .current-menu-item > a {
   color: var(--mainBlue);
@@ -44,10 +77,10 @@ nav .nav__contact > img {
 }
 
 @media screen and (max-width: 1124px) {
-  nav {
+  nav.nav--row {
     flex-wrap: wrap;
-    margin-right: 15px;
-    margin-left: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
   nav .menu-navbar-container {
     display: none;
@@ -79,6 +112,28 @@ nav .nav__contact > img {
     flex-direction: column;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.95);
+  }
+  nav #menu-navbar > li {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 0.5px solid var(--mainBlueDark);
+  }
+  nav #menu-navbar .menu-item-has-children .sub-menu {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 1rem;
+    margin: 0;
+    box-shadow: none;
+    background-color: var(--mainBlueAlpha);
+  }
+  nav #menu-navbar .menu-item-has-children .sub-menu li {
+    border-bottom: 0.5px solid white;
+    padding: 0.8rem;
+  }
+  nav #menu-navbar .menu-item-has-children .sub-menu li a {
+    color: white;
   }
   nav .nav__burger {
     cursor: pointer;
@@ -168,7 +223,7 @@ nav .nav__contact > img {
 }
 @-webkit-keyframes showMenu {
   from {
-    top: -320px;
+    top: -400px;
   }
   to {
     top: 85px;
@@ -176,7 +231,7 @@ nav .nav__contact > img {
 }
 @keyframes showMenu {
   from {
-    top: -320px;
+    top: -400px;
   }
   to {
     top: 85px;
@@ -187,7 +242,7 @@ nav .nav__contact > img {
     top: 85px;
   }
   to {
-    top: -320px;
+    top: -400px;
   }
 }
 @keyframes unshowMenu {
@@ -195,7 +250,7 @@ nav .nav__contact > img {
     top: 85px;
   }
   to {
-    top: -320px;
+    top: -400px;
   }
 }
 @-webkit-keyframes crossMenu1 {
