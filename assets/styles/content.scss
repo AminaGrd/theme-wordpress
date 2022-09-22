@@ -220,6 +220,11 @@
         color: white;
         padding: 2vh 4vw;
         p{
+            .wpcf7-captchac{
+                margin-left: 0;
+                width: 200px;
+                height: auto;
+            }
             label{
                 color: var(--mainBlueDark);
                 .wpcf7-text{
@@ -243,6 +248,12 @@
                     background-color: white;
                     color: black;
                     width: 100%;
+                }
+                .wpcf7-captchar{
+                    background-color: white;
+                    color: black;
+                    width: 100%;
+                    height: 4vh;
                 }
                 input{
                     margin-top: 1vh;
